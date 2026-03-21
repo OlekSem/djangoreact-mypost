@@ -1,0 +1,53 @@
+# ========================
+# Python / Django
+# ========================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.sqlite3
+*.log
+
+# Virtual environment
+.python-version
+venv/
+env/
+.mypy_cache/
+.pytest_cache/
+*.env
+*.venv
+
+# Django specific
+db.sqlite3
+media/
+staticfiles/
+
+# ========================
+# Node / React / Vite
+# ========================
+node_modules/
+dist/
+.build/
+.vite/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.log
+
+# ========================
+# IDE / OS
+# ========================
+.vscode/
+.idea/
+.DS_Store
+*.swp
+*.swo
+
+# ========================
+# Misc
+# ========================
+*.egg-info/
+*.egg
+*.coverage
+htmlcov/
