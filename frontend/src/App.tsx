@@ -1,11 +1,10 @@
 import './App.css'
-import CityList from "./features/cities/CityList.tsx";
 
 function App() {
 
   return(
       <>
-        <CityList/>
+        <h1>app component</h1>
       </>
   )
 }
