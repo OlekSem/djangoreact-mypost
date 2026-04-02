@@ -1,15 +1,30 @@
 version: "3.9"
 
 services:
+  db:
+    image: "postgres:latest"
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      PASTGRES_DB: postgres
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/
   api:
     image: mypost-backend-image:latest
     # container_name: mypost-backend-container
     build: ./backend
     ports:
       - "8001:8000"
+    depends_on:
+      - db
   frontend:
     image: mypost-frontend-image:latest
     # container_name: mypost-frontend-container
-    build: ./frontend
+    build:
+      context: ./frontend
+      # args:
+      #   VITE_API_BASE_URL: http://63.181.133.208:8001
     ports:
       - "1489:80"
