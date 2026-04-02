@@ -1,6 +1,7 @@
 import {useGetCityQuery, useUpdateCityMutation} from "./cityApi.ts";
 import {useEffect, useState} from "react";
 import {useNavigate, useParams} from "react-router";
+import * as React from "react";
 
 export const EditCity = () => {
     const {id} = useParams<{id: string}>();
@@ -20,7 +21,7 @@ export const EditCity = () => {
         }
     }, [city])
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e : React.FormEvent) => {
         e.preventDefault();
 
         try {
@@ -33,7 +34,7 @@ export const EditCity = () => {
             });
 
         } catch (err){
-            console.log(err.message)
+            console.log(err)
         }
     }
     if(isSuccess){

@@ -2,12 +2,14 @@ version: "3.9"
 
 services:
   api:
-    image: django-docker:latest
-    container_name: django-container
+    image: mypost-backend-image:latest
+    # container_name: mypost-backend-container
+    build: ./backend
     ports:
       - "8001:8000"
   frontend:
-    image: mypost-frontend:latest
-    container_name: mypost-frontend-container
+    image: mypost-frontend-image:latest
+    # container_name: mypost-frontend-container
+    build: ./frontend
     ports:
       - "1488:80"

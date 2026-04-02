@@ -1,5 +1,6 @@
 import {useState} from "react";
 import {useCreateCityMutation} from "./cityApi.ts";
+import * as React from "react";
 
 export const CreateCity = () => {
     const [cityName, setCityName] = useState("")
@@ -7,7 +8,7 @@ export const CreateCity = () => {
 
     const [createCity, {isLoading, isSuccess, isError}] = useCreateCityMutation();
 
-    const handleSubmit = async (e) => {
+    const handleSubmit = async (e : React.FormEvent) => {
         e.preventDefault();
         try {
             await createCity({name: cityName, description: cityDescription}).unwrap();

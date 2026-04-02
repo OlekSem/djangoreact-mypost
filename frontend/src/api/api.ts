@@ -8,5 +8,5 @@ export const api = createApi({
         baseUrl: APP_ENV.API_BASE_URL + '/api/'
     }),
     tagTypes: ['City', 'Post'],
-    endpoints: (build) => ({})
+    endpoints: () => ({})
 })

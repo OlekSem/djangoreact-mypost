@@ -37,7 +37,7 @@ export const cityApi = api.injectEndpoints({
                 url: `cities/${id}/`,
                 method: 'GET',
             }),
-            providesTags: (result, error, id) => [{type: 'City', id}],
+            providesTags: (_result, _error, id) => [{type: 'City', id}],
         })
     })
 });
