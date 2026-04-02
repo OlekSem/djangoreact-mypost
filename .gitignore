@@ -14,8 +14,8 @@ venv/
 env/
 .mypy_cache/
 .pytest_cache/
-*.env
-*.venv
+# *.env
+# *.venv
 
 # Django specific
 db.sqlite3
