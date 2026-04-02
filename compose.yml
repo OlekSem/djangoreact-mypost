@@ -12,4 +12,4 @@ services:
     # container_name: mypost-frontend-container
     build: ./frontend
     ports:
-      - "1488:80"
+      - "1489:80"
