@@ -6,3 +6,8 @@ services:
     container_name: django-container
     ports:
       - "8001:8000"
+  frontend:
+    image: mypost-frontend:latest
+    container_name: mypost-frontend-container
+    ports:
+      - "1488:80"
