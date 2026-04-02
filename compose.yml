@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  api:
+    image: django-docker:latest
+    container_name: django-container
+    ports:
+      - "8001:8000"
