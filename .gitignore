@@ -11,7 +11,7 @@ __pycache__/
 # Virtual environment
 .python-version
 venv/
-env/
+# env/
 .mypy_cache/
 .pytest_cache/
 # *.env
